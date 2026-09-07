@@ -1,4 +1,8 @@
 name: Test GCP WIF OIDC
+on:
+  push:
+    branches:
+      - main
 permissions:
   id-token: write
   content: read
