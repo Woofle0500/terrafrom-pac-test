@@ -25,3 +25,5 @@ jobs:
 
       - run: gcloud auth list
 
+      - run: gcloud iam roles list
+
