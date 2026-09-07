@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   test-auth:
-    runs-on: ubuntu:latest
+    runs-on: ubuntu-latest
     steps:
       - id: auth
         uses: google-github-actions/auth@v3
@@ -17,4 +17,10 @@ jobs:
           project_id: 'test-1-507810'
           workload_identity_provider: 'projects/594148826465/locations/global/workloadIdentityPools/github-actions-identity-pool/providers/github-actions'
           service_account: 'github-actions-readonly@test-1-507810.iam.gserviceaccount.com'
+
+      
+      - name: Verify auth
+        uses: google-github-actions/setup-gcloud@v2
+
+      - run: gcloud auth list
 
