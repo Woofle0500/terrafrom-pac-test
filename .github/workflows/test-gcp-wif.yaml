@@ -5,7 +5,7 @@ on:
       - main
 permissions:
   id-token: write
-  content: read
+  contents: read
 
 jobs:
   test-auth:
